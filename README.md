@@ -11,7 +11,7 @@ Before running the project, ensure you have the following installed:
 ## Setup
 
 1. **Clone the Repository**
-   - Clone this repository to your local machine using `git clone git@github.com:haakonjacobsen/chatgpt-tools-workshop.git
+   - Clone this repository to your local machine using `git clone git@github.com:haakonjacobsen/chatgpt-tools-workshop.git`
 
 2. **Install Dependencies**
    - Navigate to the project directory in your terminal.
