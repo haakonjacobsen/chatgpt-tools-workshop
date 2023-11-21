@@ -1,0 +1,20 @@
+{
+  "name": "chatgpt_tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "openai": "^4.19.0",
+    "play-sound": "^1.1.6",
+    "prompt-sync": "^4.2.0"
+  }
+}
