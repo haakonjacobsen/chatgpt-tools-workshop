@@ -6,7 +6,7 @@ import {textToSpeech} from "./text_to_speach.js";
 dotenv.config();
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-const OPEN_WEATHER_API_KEY = process.env.OPENWEATHER_API_KEY;
+const OPEN_WEATHER_API_KEY = process.env.OPEN_WEATHER_API_KEY;
 
 // Setup OpenAI API
 const openai = new OpenAI({apiKey: OPENAI_API_KEY});
