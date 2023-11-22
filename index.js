@@ -16,7 +16,6 @@ async function getCurrentWeather(args) {
     const { location, unit } = args; // the arguments can potentially be wrong, so be sure to handle errors
     const units = unit === 'fahrenheit' ? 'imperial' : 'metric';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=${units}&appid=${OPEN_WEATHER_API_KEY}`;
-    console.log(url);
     const response = await axios.get(url);
     const data = response.data;
     return JSON.stringify({
@@ -25,7 +24,7 @@ async function getCurrentWeather(args) {
       unit: units === 'imperial' ? 'fahrenheit' : 'celsius'
     });
   } catch (error) {
-    return 'Error fetching weather data. Got this error:' + error.message + error.data;
+    return 'Error fetching weather data. Got this error:' + error.message;
   }
 }
 
@@ -47,7 +46,7 @@ const tools = [
         properties: {
           location: {
             type: "string",
-            description: "The city and state, e.g. San Francisco",
+            description: "The city and state, e.g. Paris, London, San Fransisco. Only use the city name's, not the state or country.",
           },
           unit: { type: "string", enum: ["celsius", "fahrenheit"] },
         },
