@@ -25,8 +25,7 @@ async function getCurrentWeather(args) {
       unit: units === 'imperial' ? 'fahrenheit' : 'celsius'
     });
   } catch (error) {
-    console.log(error);
-    return JSON.stringify('Error fetching weather data. Service may be down.');
+    return 'Error fetching weather data. Got this error:' + error.message + error.data;
   }
 }
 
@@ -42,13 +41,13 @@ const tools = [
     type: "function",
     function: {
       name: "get_current_weather",
-      description: "Get the current weather in a given location",
+      description: "Get the current weather in a given city, e.g. San Francisco. Only use the city name's, not the state or country.",
       parameters: {
         type: "object",
         properties: {
           location: {
             type: "string",
-            description: "The city and state, e.g. San Francisco, CA",
+            description: "The city and state, e.g. San Francisco",
           },
           unit: { type: "string", enum: ["celsius", "fahrenheit"] },
         },
@@ -69,7 +68,7 @@ async function runQuery(query, messages) {
       model: "gpt-4-1106-preview",
       messages: messages,
       tools: tools,
-      tool_choice: "auto", // auto is default, but we'll be explicit
+      tool_choice: "auto",
     });
 
     const responseMessage = response.choices[0].message;
