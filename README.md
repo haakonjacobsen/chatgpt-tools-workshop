@@ -22,7 +22,7 @@ Before running the project, ensure you have the following installed:
    - Add your OpenAI API key and OpenWeather API key in the `.env` file:
      ```
      OPENAI_API_KEY=your_openai_api_key_here
-     OPENWEATHER_API_KEY=your_openweather_api_key_here
+     OPEN_WEATHER_API_KEY=your_openweather_api_key_here
      ```
 
 ## Running the Project
