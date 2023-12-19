@@ -20,6 +20,8 @@ Before running the project, ensure you have the following installed:
 3. **Environment Variables**🔐
    - Create a `.env` file in the root of the project.
    - Add your OpenAI API key and OpenWeather API key in the `.env` file:
+
+     (If you don't have one, you can create one for [OpenAI here](https://platform.openai.com/api-keys), and [OpenWeather here](https://openweathermap.org/appid).
      ```
      OPENAI_API_KEY=your_openai_api_key_here
      OPEN_WEATHER_API_KEY=your_openweather_api_key_here
